@@ -12,6 +12,9 @@ So far the following protocols are supported.
 7. ICMP
 8. UDP
 
+It can also replay pcap files as well.
+
+Look at `packet_gen.json` on fine tuning the packet generation.
 
 ## How to Run ?
 
