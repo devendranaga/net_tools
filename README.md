@@ -18,12 +18,20 @@ Look at `packet_gen.json` on fine tuning the packet generation.
 
 ## How to Run ?
 
-The release is based on AARCH64 Apple architecture. Works only on AARCH64 architecture.
-Future release targeted to X86-86.
+The release is based on AARCH64 Apple architecture.
+
+To run on AARCH64 machines,
 
 ```bash
 sudo ./packet_gen -f packet_gen.json
 ```
+
+To run on X86-64 machines, install `qemu-aarch64-static` and run
+
+```bash
+sudo qemu-aarch64-static ./packet_gen -f packet_gen.json
+```
+
 
 Currently only one protocol can be enabled at a time to generate packets.
 
