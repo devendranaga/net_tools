@@ -105,6 +105,7 @@
         "priority": 1,
         "dei": true,
         "id": 10,
+        "randomize": true,
         "eth_src_mac": "00:11:22:33:44:55",
         "eth_dst_mac": "00:11:22:33:44:55",
         "ethertype": "0x8101",
@@ -129,7 +130,7 @@
         "inter_pkt_gap_us": 100
     },
     "udp": {
-        "enable": true,
+        "enable": false,
         "eth": {
             "dst_addr": "ff:ff:ff:ff:ff:ff",
             "src_addr": "00:11:22:11:11:12"
@@ -144,6 +145,24 @@
         "dst_port": 1212,
         "length": 100,
         "counter": 1,
+        "inter_pkt_gap_us": 100
+    },
+    "tcp": {
+        "enable": true,
+        "eth": {
+            "dst_addr": "ff:ff:ff:ff:ff:ff",
+            "src_addr": "00:11:22:11:11:12"
+        },
+        "ipv4": {
+            "src_addr": "192.168.1.1",
+            "dst_addr": "192.168.1.2",
+            "ttl": 128,
+            "id": "0x1212"
+        },
+        "src_port": 1122,
+        "dst_port": 1212,
+        "length": 100,
+        "counter": 100,
         "inter_pkt_gap_us": 100
     },
     "pcap_replay": {

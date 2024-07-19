@@ -11,6 +11,7 @@ So far the following protocols are supported.
 6. IPV4
 7. ICMP
 8. UDP
+9. TCP
 
 It can also replay pcap files as well.
 
