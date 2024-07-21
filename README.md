@@ -7,11 +7,12 @@ So far the following protocols are supported.
 2. ARP
 3. QinQ
 4. VLAN
-5. MACsec
-6. IPV4
-7. ICMP
-8. UDP
-9. TCP
+5. Double tagged VLANs
+6. MACsec
+7. IPV4
+8. ICMP
+9. UDP
+10. TCP
 
 It can also replay pcap files as well.
 
@@ -34,5 +35,15 @@ sudo qemu-aarch64-static ./packet_gen -f packet_gen.json
 ```
 
 
-Currently only one protocol can be enabled at a time to generate packets.
+Currently only one protocol can be enabled at a time to generate packets. The tool cannot be used to send multiple protocols at a time.
+
+## New features:
+
+### v0.1.0000
+
+Below are the new features since last release:
+
+1. Double tagged VLANs
+2. TCP with flags
+3. along with sending the generated packets, the tool now logs them into a pcap file
 

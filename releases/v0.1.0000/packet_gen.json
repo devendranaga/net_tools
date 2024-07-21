@@ -105,6 +105,12 @@
         "priority": 1,
         "dei": true,
         "id": 10,
+        "vlan": {
+            "enable": false,
+            "priority": 1,
+            "dei": true,
+            "id": 10
+        },
         "randomize": true,
         "eth_src_mac": "00:11:22:33:44:55",
         "eth_dst_mac": "00:11:22:33:44:55",
@@ -161,8 +167,16 @@
         },
         "src_port": 1122,
         "dst_port": 1212,
+        "flags": {
+            "syn": 1,
+            "ack": 1,
+            "psh": 1,
+            "rst": 1,
+            "urg": 1,
+            "fin": 1
+        },
         "length": 100,
-        "counter": 100,
+        "counter": 1,
         "inter_pkt_gap_us": 100
     },
     "pcap_replay": {
@@ -171,5 +185,9 @@
         "intvl_us": 100,
         "use_pcap_timediff": false,
         "repeat": false
+    },
+    "pcap_log": {
+        "enable": true,
+        "filename": "./pcap_log.pcap"
     }
 }
