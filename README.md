@@ -1,6 +1,16 @@
 # pkt_gen
 packet generator for TCP/IP protocols.
 
+# Disclaimer
+
+The tool is kept here for learning and testing purposes only. It is not intended to be used for
+malicious or harmful purposes directly or indirectly. The author of the tool are not liable
+or responsible for any damages caused by the tool results.
+
+# Description
+
+More description about how to use the tool is [here][https://devnaga.substack.com/p/packet-generator).
+
 So far the following protocols are supported.
 
 1. Ethernet
