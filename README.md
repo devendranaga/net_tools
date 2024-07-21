@@ -9,7 +9,7 @@ or responsible for any damages caused by the tool results.
 
 # Description
 
-More description about how to use the tool is [here][https://devnaga.substack.com/p/packet-generator).
+More description about how to use the tool is [here](https://devnaga.substack.com/p/packet-generator).
 
 So far the following protocols are supported.
 
