@@ -28,6 +28,15 @@ It can also replay pcap files as well.
 
 Look at `packet_gen.json` on fine tuning the packet generation.
 
+## Scanning the local network
+
+In scanning mode the packet_gen would listen for packets and dump the mac address and the ip address
+of the hosts in the network.
+
+use `-s <interface name>` option as argument to listen on the network interface.
+
+This is a passive scan mode and undectable by the firewall.
+
 ## How to Run ?
 
 The release is based on AARCH64 Apple architecture.
