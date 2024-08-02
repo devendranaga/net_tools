@@ -1,0 +1,10 @@
+{
+    "eth": {
+        "src_mac": "21:22:33:44:55:66",
+        "dst_mac": "00:11:22:33:11:11",
+        "ethertype": "0x0800",
+        "change_all_packets": true,
+        "change_packet_numbers": [0, 1, 2]
+    }
+}
+
