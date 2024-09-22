@@ -1,0 +1,237 @@
+{
+    "ifname": "dummy0",
+    "eth": {
+        "enable": false,
+        "randomize": true,
+        "src_mac": "00:11:22:33:44:55",
+        "dst_mac": "00:11:22:11:11:22",
+        "ethertype": "0x0800",
+        "pkt_len": 100,
+        "repeat": true,
+        "count": 100,
+        "inter_pkt_gap_ns": 100
+    },
+    "arp": {
+        "enable": false,
+        "spoof_mode": true,
+        "hwtype": 1,
+        "vlan": {
+            "enable": true,
+            "dei": true,
+            "priority": 7,
+            "vid": 10
+        },
+        "protocol_type": "0x0800",
+        "hw_size": 6,
+        "protocol_size": 4,
+        "opcode": 1,
+        "sender_mac": "00:11:22:33:44:55",
+        "sender_ipaddr": "192.168.1.1",
+        "target_mac": "00:11:22:33:44:55",
+        "target_ipaddr": "192.168.1.1",
+        "repeat": true,
+        "count": 100,
+        "inter_pkt_gap_ns": 100
+    },
+    "ipv4": {
+        "enable": false,
+        "src_mac": "00:11:22:33:44:55",
+        "dest_mac": "11:22:33:44:11:22",
+        "flags": {
+            "df": true,
+            "mf": true
+        },
+        "frag_off": 10,
+        "ttl": 1,
+        "auto_ttl": true,
+        "random_ttl": true,
+        "src_ipaddr": "192.168.1.1",
+        "dst_ipaddr": "192.168.1.2",
+        "randomize_src_ipaddr": true,
+        "randomize_dst_ipaddr": true,
+        "id": "0x1234",
+        "random_id": true,
+        "ipv4_len": 123,
+        "protocol": 17,
+        "count": 10,
+        "repeat": true,
+        "inter_pkt_gap_ns": 100,
+        "random_checksum": true
+    },
+    "icmp": {
+        "enable": false,
+        "eth": {
+            "src_mac": "00:11:22:33:44:55",
+            "dst_mac": "11:22:33:44:55:66"
+        },
+        "ipv4": {
+            "src_ipaddr": "192.168.1.1",
+            "dst_ipaddr": "192.168.1.255",
+            "ttl": 128,
+            "id": "0x1234"
+        },
+        "type": 8,
+        "code": 0,
+        "echo_req": {
+            "id": "0x1212",
+            "seq_no": 1,
+            "data_len": 44
+        },
+        "echo_reply": {
+            "id": "0x1213",
+            "seq_no": 1,
+            "data_len": 44
+        },
+        "count": 100,
+        "inter_pkt_gap_ns": 10000
+    },
+    "macsec": {
+        "enable": false,
+        "eth_src": "00:01:02:03:04:05",
+        "eth_dst": "00:02:03:04:05:04",
+        "ethertype": "0x88E5",
+        "tci": {
+            "ver": 0,
+            "es": 0,
+            "sc": 1,
+            "scb": 0,
+            "e": 0,
+            "c": 1,
+            "an": 0
+        },
+        "short_len": 0,
+        "pkt_number": 444,
+        "sci": {
+            "mac": "01:02:03:04:05:06",
+            "port_id": 1
+        },
+        "macsec_ethertype": "0x0800",
+        "data_len": 444,
+        "icv": "00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F",
+        "randomize_icv": true,
+        "count": 100,
+        "inter_pkt_gap_ns": 100
+    },
+    "vlan": {
+        "enable": false,
+        "priority": 1,
+        "dei": true,
+        "id": 10,
+        "vlan": {
+            "enable": false,
+            "priority": 1,
+            "dei": true,
+            "id": 10
+        },
+        "randomize": true,
+        "eth_src_mac": "00:11:22:33:44:55",
+        "eth_dst_mac": "00:11:22:33:44:55",
+        "ethertype": "0x8101",
+        "incremental_vids": true,
+        "count": 1,
+        "inter_pkt_gap_ns": 100,
+        "repeat": true
+    },
+    "qinq": {
+        "enable": false,
+        "priority": 1,
+        "dei": true,
+        "id": 10,
+        "eth_src_mac": "00:11:22:33:44:55",
+        "eth_dst_mac": "00:11:22:33:44:55",
+        "vlan": {
+            "priority": 1,
+            "dei": true,
+            "id": 10,
+            "ethertype": "0x0800"
+        },
+        "counter": 1,
+        "inter_pkt_gap_ns": 100
+    },
+    "udp": {
+        "enable": true,
+        "eth": {
+            "dst_addr": "ff:ff:ff:ff:ff:ff",
+            "src_addr": "00:11:22:11:11:12"
+        },
+        "ipv4": {
+            "src_addr": "192.168.1.1",
+            "dst_addr": "192.168.1.2",
+            "ttl": 128,
+            "id": "0x1212"
+        },
+        "src_port": 1122,
+        "dst_port": 1212,
+        "length": 100,
+        "randomize_length": true,
+        "counter": 1,
+        "inter_pkt_gap_ns": 100,
+        "repeat": true
+    },
+    "tcp": {
+        "enable": false,
+        "eth": {
+            "dst_addr": "ff:ff:ff:ff:ff:ff",
+            "src_addr": "00:11:22:11:11:12"
+        },
+        "ipv4": {
+            "src_addr": "192.168.1.1",
+            "dst_addr": "192.168.1.2",
+            "ttl": 128,
+            "id": "0x1212"
+        },
+        "src_port": 1122,
+        "dst_port": 1212,
+        "flags": {
+            "syn": 1,
+            "ack": 1,
+            "psh": 1,
+            "rst": 1,
+            "urg": 1,
+            "fin": 1
+        },
+        "length": 100,
+        "counter": 1,
+        "inter_pkt_gap_ns": 100,
+        "repeat": true
+    },
+    "someip": {
+        "enable": false,
+        "eth": {
+            "dst_addr": "11:22:33:11:22:11",
+            "src_addr": "11:22:11:11:11:22"
+        },
+        "ipv4": {
+            "src_addr": "192.168.1.1",
+            "dst_addr": "192.168.1.2",
+            "ttl": 128,
+            "id": "0x1212"
+        },
+        "udp": {
+            "src_port": 1122,
+            "dst_port": 1121
+        },
+        "service_id": "0x0111",
+        "method_id": "0x0001",
+        "length": 100,
+        "client_id": "0x0001",
+        "session_id": "0x0002",
+        "version": 1,
+        "interface_version": 1,
+        "payload_length": 100,
+        "counter": 100,
+        "inter_pkt_gap_ns": 100,
+        "repeat": false
+    },
+    "pcap_replay": {
+        "enable": false,
+        "filepath": "./avtp_udp.pcap",
+        "intvl_ns": 100,
+        "use_pcap_timediff": false,
+        "repeat": false
+    },
+    "pcap_log": {
+        "enable": true,
+        "filename": "./pcap_log.pcap"
+    }
+}
